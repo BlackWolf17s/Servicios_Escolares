@@ -39,9 +39,39 @@ Da un ejemplo
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+Por supuesto, aquí están los enlaces a las descargas de las herramientas mencionadas:
 
-_Dí cómo será ese paso_
+### Paso 1: Instalación de Java (JDK)
+
+- **Descarga del JDK:**
+   - [Descargar JDK de Oracle](https://www.oracle.com/java/technologies/javase-downloads.html)
+   - [Descargar OpenJDK](https://openjdk.java.net/)
+
+### Paso 2: Instalación de NetBeans IDE
+
+- **Descarga de NetBeans:**
+   - [Descargar NetBeans IDE](https://netbeans.apache.org/download/index.html)
+
+### Paso 3: Instalación de Python
+
+- **Descarga e Instalación de Python:**
+   - [Descargar Python](https://www.python.org/downloads/)
+
+### Paso 4: Configuración de un Proyecto en NetBeans
+
+- **Importación del Proyecto:**
+   - Utiliza la interfaz de usuario de NetBeans para abrir y configurar el proyecto.
+
+- **Configuración de Dependencias de Python:**
+   - Se asume que el proyecto tiene un archivo `requirements.txt` con las dependencias de Python.
+
+### Paso 5: Ejecución y Prueba del Proyecto
+
+- **Compilación del Proyecto:**
+   - Utiliza las funciones de compilación de NetBeans.
+
+- **Ejecución del Proyecto:**
+   - Utiliza las funciones de ejecución de NetBeans.
 
 ```
 Da un ejemplo
@@ -57,70 +87,170 @@ _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para 
 
 ## Ejecutando las pruebas ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+_La ejecución de pruebas automatizadas en un sistema de administración escolar puede depender de las herramientas y tecnologías específicas utilizadas en el proyecto. A continuación, se proporciona un ejemplo general utilizando JUnit para Java y Pytest para Python en un entorno de NetBeans. Asegúrate de ajustar estos pasos según las herramientas específicas de tu proyecto._
 
-### Analice las pruebas end-to-end 🔩
+### Java (JUnit en NetBeans):
 
-_Explica que verifican estas pruebas y por qué_
+1. **Creación de Pruebas:**
+   - Utiliza JUnit para escribir tus casos de prueba en Java. Asegúrate de incluir casos de prueba para las funciones críticas del sistema.
 
-```
-Da un ejemplo
-```
+2. **Configuración de NetBeans:**
+   - En NetBeans, verifica que JUnit esté configurado como el framework de prueba. Esto generalmente se hace automáticamente, pero puedes revisar la configuración del proyecto para confirmar.
 
-### Y las pruebas de estilo de codificación ⌨️
+3. **Ejecución de Pruebas en NetBeans:**
+   - Haz clic derecho en tu proyecto y selecciona "Test". NetBeans ejecutará todas las pruebas definidas en tu proyecto y mostrará los resultados en la interfaz.
 
-_Explica que verifican estas pruebas y por qué_
+4. **Análisis de Resultados:**
+   - Analiza la salida de las pruebas en NetBeans. Puedes ver qué pruebas pasaron, cuáles fallaron y los detalles de los errores.
 
-```
-Da un ejemplo
-```
+### Python (Pytest):
+
+1. **Instalación de Pytest:**
+   - Si aún no lo has hecho, instala Pytest en tu entorno de Python ejecutando `pip install pytest` en la línea de comandos.
+
+2. **Creación de Pruebas:**
+   - Utiliza Pytest para escribir tus casos de prueba en Python. Asegúrate de incluir pruebas para las funciones clave del sistema.
+
+3. **Ejecución de Pruebas en la Línea de Comandos:**
+   - Navega al directorio de tu proyecto en la línea de comandos y ejecuta `pytest`. Pytest buscará automáticamente archivos de prueba y ejecutará las pruebas.
+
+4. **Análisis de Resultados:**
+   - Examina la salida de Pytest en la consola. Identifica cualquier prueba fallida y revisa los detalles del error.
+
+### Consideraciones Adicionales:
+
+- **Integración Continua:**
+  - Integra las pruebas en tu sistema de integración continua (CI) para ejecutar automáticamente las pruebas con cada cambio en el repositorio del código fuente.
+
+- **Cobertura de Código:**
+  - Considera utilizar herramientas de medición de cobertura de código como JaCoCo para Java o Coverage.py para Python para evaluar la cobertura de tus pruebas.
+
+_Recuerda que estos pasos son generales y pueden variar según las herramientas y configuraciones específicas del proyecto utilizado._
 
 ## Despliegue 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
+### Java
+
+1. **Empaquetado del Proyecto:**
+   - Utiliza Maven o Gradle para empaquetar el proyecto en un archivo JAR ejecutable.
+
+2. **Configuración del Ambiente de Producción:**
+   - Asegúrate de tener instalado el entorno de ejecución Java (JRE) en el servidor de producción.
+
+3. **Copia del Archivo JAR:**
+   - Transfiere el archivo JAR generado al servidor de producción.
+
+4. **Ejecución del JAR:**
+   - Ejecuta la aplicación Java con el comando `java -jar nombre-del-archivo.jar`.
+
+### Python
+
+1. **Requerimientos del Proyecto:**
+   - Define las dependencias en el archivo `requirements.txt`.
+
+2. **Ambiente Virtual (Opcional):**
+   - Crea un entorno virtual con `virtualenv` o `venv`.
+
+3. **Empaquetado (Opcional):**
+   - Empaqueta la aplicación con `setuptools` o `wheel` si es necesario.
+
+4. **Transferencia de Archivos:**
+   - Transfiere archivos y ejecuta `pip install -r requirements.txt`.
+
+5. **Configuración del Servidor Web:**
+   - Configura un servidor web para dirigir las solicitudes a la aplicación.
+
+6. **Ejecución de la Aplicación:**
+   - Ejecuta la aplicación Python.
+
+## Notas Generales
+
+- **Gestión de Configuraciones:**
+  - Asegúrate de configurar correctamente las variables de entorno y las configuraciones específicas del entorno.
+
+- **Logs y Monitoreo:**
+  - Configura registros detallados y considera herramientas de monitoreo.
+
+- **Respaldos:**
+  - Implementa un plan de respaldos regular para garantizar la integridad de los datos.
+
+- **Escalabilidad:**
+  - Diseña la arquitectura para escalar en respuesta a las demandas del tráfico.
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+_Este proyecto de administración escolar está desarrollado utilizando [Java](https://www.java.com/) con [NetBeans](https://netbeans.apache.org/), [Python](https://www.python.org/), [MySQL](https://www.mysql.com/) y [Git](https://git-scm.com/)._
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+## Contenido
+
+1. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+2. [Estructura del Proyecto](#estructura-del-proyecto)
+3. [Configuración y Despliegue](#configuración-y-despliegue)
+4. [Contribución](#contribución)
+5. [Licencia](#licencia)
+
+## Tecnologías Utilizadas
+
+- **Java con NetBeans:** Desarrollo de la lógica de negocio y backend.
+- **Python:** Tareas específicas y scripts.
+- **MySQL:** Sistema de gestión de base de datos.
+- **Git:** Control de versiones y colaboración en el código.
+
+## Estructura del Proyecto
+
+- **`/backend`:** Contiene el código fuente en Java desarrollado en NetBeans.
+- **`/scripts`:** Alberga scripts en Python para tareas específicas.
+- **`/database`:** Incluye scripts SQL para la creación de la base de datos MySQL.
+
+## Configuración y Despliegue
+
+1. **Configuración del Entorno:**
+   - Asegúrate de tener Java, Python, MySQL y Git instalados en tu entorno de desarrollo.
+
+2. **Base de Datos:**
+   - Ejecuta los scripts SQL en `/database` para crear la base de datos y tablas necesarias.
+
+3. **Backend Java:**
+   - Abre el proyecto en NetBeans desde el directorio `/backend` y realiza las configuraciones necesarias.
+   - Compila y ejecuta la aplicación Java.
+
+4. **Scripts Python:**
+   - Ejecuta los scripts en `/scripts` según sea necesario.
 
 ## Contribuyendo 🖇️
 
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+```
+Proximamente...
+```
 
 ## Wiki 📖
 
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
+Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra...
 
 ## Versionado 📌
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+```
+Proximamente...
+```
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+* **Gerardo Garrido** - *Documentación* - [BlackWolf17s](https://github.com/BlackWolf17s) 
+* **Victor Villaseñor** - *Trabajo Inicial* - [Manvic8](https://github.com/Manvic8)
+* **Pedro Jesus** - *Trabajo Inicial* - [OwlGhoul](https://github.com/OwlGhoul)
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](.......) para detalles
 
 ## Expresiones de Gratitud 🎁
 
 * Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
+* Invita una cerveza 🍺 o unos cigarros :smoking: a alguien del equipo. 
 * Da las gracias públicamente 🤓.
-* Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
-* etc.
+* Dona con cripto a esta dirección: `abdielchiquitoycabezon<3`
 
 
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+⌨️ con ❤️ por [BlackWolf17s](https://github.com/BlackWolf17s)  😊
