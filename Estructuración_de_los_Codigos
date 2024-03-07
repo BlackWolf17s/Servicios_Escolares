@@ -1,0 +1,70 @@
+# Gestión de Biblioteca en Python
+
+Este proyecto es un ejemplo simple de una aplicación de gestión de biblioteca en Python. Organiza el código en funciones y clases lógicas para facilitar la lectura, el mantenimiento y la comprensión.
+
+## Pautas de Estructuración
+
+### Funciones:
+
+1. **Responsabilidad Única:**
+   - Cada función realiza una tarea específica y única.
+
+2. **Longitud Adecuada:**
+   - Las funciones son cortas y concisas para mejorar la legibilidad.
+
+3. **Nombre Descriptivo:**
+   - Se eligen nombres descriptivos que reflejan claramente el propósito de cada función.
+
+4. **Parámetros y Retornos Claros:**
+   - Limitamos el número de parámetros y aseguramos que sean claros y comprensibles.
+
+5. **Evitar Efectos Secundarios:**
+   - Se busca que las funciones sean "puras", sin efectos secundarios.
+
+### Clases:
+
+1. **Responsabilidad Única:**
+   - Cada clase tiene una responsabilidad única y bien definida.
+
+2. **Encapsulamiento:**
+   - Se utiliza el encapsulamiento para ocultar la implementación interna de las clases.
+
+3. **Métodos Coherentes:**
+   - Métodos relacionados se agrupan en cada clase.
+
+4. **Nombre Descriptivo:**
+   - Nombres de clases reflejan su función principal.
+
+5. **Evitar Clases Demasiado Grandes:**
+   - Clases se dividen si se vuelven demasiado grandes y realizan múltiples tareas.
+
+## Ejemplo Práctico
+
+```python
+class Libro:
+    def __init__(self, titulo, autor, genero):
+        self.titulo = titulo
+        self.autor = autor
+        self.genero = genero
+
+class Biblioteca:
+    def __init__(self):
+        self.libros = []
+
+    def agregar_libro(self, libro):
+        self.libros.append(libro)
+
+    def buscar_libro_por_autor(self, autor):
+        return [libro for libro in self.libros if libro.autor == autor]
+
+# Ejemplo de uso
+biblioteca = Biblioteca()
+
+libro1 = Libro("El Señor de los Anillos", "J.R.R. Tolkien", "Fantasía")
+libro2 = Libro("1984", "George Orwell", "Ciencia Ficción")
+
+biblioteca.agregar_libro(libro1)
+biblioteca.agregar_libro(libro2)
+
+libros_de_orwell = biblioteca.buscar_libro_por_autor("George Orwell")
+print(libros_de_orwell)
